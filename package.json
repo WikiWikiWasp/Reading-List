@@ -1,10 +1,10 @@
 {
-  "name": "angular-seed",
+  "name": "reading-list",
   "private": true,
   "version": "0.0.0",
-  "description": "A starter project for AngularJS",
-  "repository": "https://github.com/angular/angular-seed",
-  "license": "MIT",
+  "description": "Playing around with Angular.js by making a reading list app.",
+  "repository": "https://github.com/WikiWikiWasp/Reading-List.git",
+  "license": "none",
   "devDependencies": {
     "bower": "^1.7.7",
     "http-server": "^0.9.0",
