@@ -7,7 +7,7 @@
     var genres = ['folklore', 'fantasy', 'fiction',
                   'non-fiction', 'thriller', 'romance',
                   'horror', 'humor', 'legend',
-                  'mystery', 'mythology', 'poetry']
+                  'mystery', 'mythology', 'poetry'];
     var books = [
         {
             title: 'The Last Wish: Introducing The Witcher',
@@ -44,6 +44,6 @@
             }
         }
     ];
-});
+})();
 
 
