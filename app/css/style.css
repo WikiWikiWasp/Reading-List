@@ -79,7 +79,7 @@ book-cover {
 form[name="reviewForm"] {
     overflow: hidden;
 }
-label{
+.label{
     margin-right: 15px;
 }
 .button-from-hell {
