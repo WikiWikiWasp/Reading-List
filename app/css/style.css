@@ -79,8 +79,22 @@ book-cover {
 form[name="reviewForm"] {
     overflow: hidden;
 }
-.label{
+/*label and label-primary bootstrap components not loading*/
+.label {
     margin-right: 15px;
+    display: inline;
+    padding: .2em .6em .3em;
+    #font-size: 75%;
+    font-weight: bold;
+    #line-height: 1;
+    color: white;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+}
+.label-primary {
+    background-color: #337ab7;
 }
 .button-from-hell {
     padding: 0;
