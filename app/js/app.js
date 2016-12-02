@@ -15,6 +15,15 @@
                     genres: '='
                 }
             }
+        })
+        .directive('bookCover', function () {
+           return {
+               restrict: 'E',
+               // apparently replace is now deprecated...need to figure out how to replace
+               // replace: false,
+               // transclude: true,
+               templateURL: 'templates/book-cover.html',
+           }
         });
 
     var genres = ['folklore', 'fantasy', 'fiction',
@@ -46,7 +55,7 @@
             }
         },
         {
-            title: 'The Alchemyst: The Secretes of the Immortal Nicholas Flamel',
+            title: 'The Alchemyst: The Secrets of the Immortal Nicholas Flamel',
             author: 'Michael Scott',
             isbn: '0385736002',
             review: '"Entertaining and engaging for all ages!"―E. Walker',
