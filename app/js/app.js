@@ -6,6 +6,7 @@
         .controller('ReadingListController', function () {
            this.genres = genres;
            this.books = books;
+           this.showForm = false;
         })
         .directive('bookGenres', function () {
             return {
@@ -20,10 +21,32 @@
            return {
                restrict: 'E',
                // apparently replace is now deprecated...need to figure out how to replace
-               // replace: false,
+               // replace: true,
                // transclude: true,
                templateURL: 'templates/book-cover.html',
            }
+        })
+        .directive('reviewForm', function() {
+            return {
+                restrict: 'E',
+                templateUrl: 'templates/review-form.html',
+                //replace working here but not bookCover?
+                replace: true,
+                controller: function(){
+                    this.book = {genres:{}};
+
+                    this.addReview = function(form){
+                        books.push(this.book);
+                        this.book = {genres:{}};
+                        form.$setPristine();
+                    }
+                },
+                controllerAs: 'reviewFormCtrl',
+                scope: {
+                    books: '=',
+                    genres: '='
+                }
+            }
         });
 
     var genres = ['folklore', 'fantasy', 'fiction',

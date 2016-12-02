@@ -1,6 +1,20 @@
 <h1>Jason's Angular Reading List</h1>
 
 <div class='row' ng-controller="ReadingListController as rlCTRL">
+
+    <!--Review Form-->
+    <button class="btn btn-primary" ng-click="rlCTRL.showForm = !rlCTRL.showForm">
+        {{rlCTRL.showForm ? "Hide Review" : "Create a Review"}}
+    </button>
+    <hr />
+    <review-form change-review-form="rlCTRL.changeReviewForm"
+                 books="rlCTRL.books"
+                 genres="rlCTRL.genres"
+                 ng-show="rlCTRL.showForm">
+    </review-form>
+    <hr />
+
+    <!--Reading List-->
     <ul class="list-unstyled col-sm-8">
         <li class="book row" ng-repeat="book in rlCTRL.books">
             <!--doesn't work without `replace=true`-->
