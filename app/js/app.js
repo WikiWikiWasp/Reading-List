@@ -20,17 +20,14 @@
         .directive('bookCover', function () {
            return {
                restrict: 'E',
-               // apparently replace is now deprecated...need to figure out how to replace
-               // replace: true,
-               // transclude: true,
-               templateURL: 'templates/book-cover.html',
+               replace: true,
+               templateUrl: 'templates/book-cover.html',
            }
         })
         .directive('reviewForm', function() {
             return {
                 restrict: 'E',
                 templateUrl: 'templates/review-form.html',
-                //replace working here but not bookCover?
                 replace: true,
                 controller: function(){
                     this.book = {genres:{}};
